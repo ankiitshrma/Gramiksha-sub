@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.webkit.WebView;
+import com.asksira.webviewsuite.WebViewSuite;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,7 +29,10 @@ public class AboutUsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-
+    
+    View view;
+    WebViewSuite webViewSuite;
+    
     public AboutUsFragment() {
         // Required empty public constructor
     }
@@ -64,7 +68,27 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        view = inflater.inflate(R.layout.fragment_about_us, container, false);
+        webViewSuite = (WebViewSuite) view.findViewById(R.id.webViewSuite);
+
+        webViewSuite.customizeClient(new WebViewSuite.WebViewSuiteCallback() {
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return false;
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
