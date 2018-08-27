@@ -14,12 +14,12 @@ import android.webkit.WebViewClient;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ATeamFragment.OnFragmentInteractionListener} interface
+ * {@link BlogFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ATeamFragment#newInstance} factory method to
+ * Use the {@link BlogFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ATeamFragment extends Fragment {
+public class BlogFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +31,7 @@ public class ATeamFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ATeamFragment() {
+    public BlogFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class ATeamFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ATeamFragment.
+     * @return A new instance of fragment BlogFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ATeamFragment newInstance(String param1, String param2) {
-        ATeamFragment fragment = new ATeamFragment();
+    public static BlogFragment newInstance(String param1, String param2) {
+        BlogFragment fragment = new BlogFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,9 +65,8 @@ public class ATeamFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_ateam, container, false);
-        final WebView webView = (WebView) view.findViewById(R.id.webView_ATeam);
+        View view = inflater.inflate(R.layout.fragment_blog, container, false);
+        final WebView webView = (WebView) view.findViewById(R.id.webView_Blog);
 
         webView.getSettings().setJavaScriptEnabled(true);
 
@@ -76,16 +75,16 @@ public class ATeamFragment extends Fragment {
             public void onPageFinished(WebView view, String url)
             {
                 view.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('cd-header')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('header-container')[0].style.display='none'; " +
                         "var head = document.getElementsByClassName('footer')[0].style.display='none'; " +
+                        "var head = document.getElementById('blog-nav-wrapper').style.display = 'none'; " +
                         "})()");
             }
         });
 
-        webView.loadUrl("https://gramiksha.in/team");
+        webView.loadUrl("https://blog.gramiksha.in/all%20articles/");
         return view;
-
-    }
+        }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

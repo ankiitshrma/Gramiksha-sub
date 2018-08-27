@@ -1,12 +1,17 @@
 package com.ankiitshrma.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -26,6 +31,13 @@ public class GalleryFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView imagesList;
+    Button button;
+
+    int A[]={R.drawable.pic_one,R.drawable.pic_two,R.drawable.pic_threee,R.drawable.pic_four,R.drawable.pic_five,R.drawable.pic_six
+            ,R.drawable.pic_seven,R.drawable.pic_eight,R.drawable.pic_nine,R.drawable.pic_ten,R.drawable.pic_eleven};
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +76,29 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+        button=(Button)view.findViewById(R.id.button);
+        imagesList=(RecyclerView)view.findViewById(R.id.imagesList);
+       // LinearLayoutManager manager=new LinearLayoutManager(this);
+
+        final FragmentActivity c = getActivity();
+
+        LinearLayoutManager manager = new LinearLayoutManager(c);
+        imagesList.setLayoutManager(manager);
+       // adapter=new MyAdapter(A,);
+
+       final MyAdapter adapter = new MyAdapter(A,c);
+        imagesList.setAdapter(adapter);
+        imagesList.setNestedScrollingEnabled(false);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url="https://www.facebook.com/Gramiksha/photos";
+                Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+                startActivity(i);
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

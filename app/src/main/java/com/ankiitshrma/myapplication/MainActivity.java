@@ -20,7 +20,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements HomeFragment.OnFragmentInteractionListener, GalleryFragment.OnFragmentInteractionListener, ProjectsFrament.OnFragmentInteractionListener,
         SubmissionsFragment.OnFragmentInteractionListener, AboutUsFragment.OnFragmentInteractionListener, JoinUsFragment.OnFragmentInteractionListener,
-        ContactUsFragment.OnFragmentInteractionListener, ATeamFragment.OnFragmentInteractionListener {
+        ContactUsFragment.OnFragmentInteractionListener, ATeamFragment.OnFragmentInteractionListener ,SupportersFragment.OnFragmentInteractionListener,
+        BlogFragment.OnFragmentInteractionListener, EventsFragment.OnFragmentInteractionListener{
 
 
     private NavigationView navigationView;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity
     private static final String fragment_join_us="join_us";
     private static final String fragment_contact_us="contact_us";
     private static final String fragment_ateam="a_team";
+    private static final String fragment_blog="blog";
+    private static final String fragment_supporters="supporters";
+    private static final String fragment_events="events";
 
     public static String current_fragment_tag=fragment_home;
 
@@ -128,32 +132,44 @@ public class MainActivity extends AppCompatActivity
                         navItemIndex = 0;
                         current_fragment_tag = fragment_home;
                         break;
-                    case R.id.nav_projects:
+                    case R.id.nav_blog:
                         navItemIndex = 1;
+                        current_fragment_tag = fragment_blog;
+                        break;
+                    case R.id.nav_events:
+                        navItemIndex = 2;
+                        current_fragment_tag = fragment_events;
+                        break;
+                    case R.id.nav_projects:
+                        navItemIndex = 3;
                         current_fragment_tag = fragment_projects;
                         break;
                     case R.id.nav_gallery:
-                        navItemIndex = 2;
+                        navItemIndex = 4;
                         current_fragment_tag = fragment_gallery;
                         break;
                     case R.id.nav_submissions:
-                        navItemIndex = 3;
+                        navItemIndex = 5;
                         current_fragment_tag = fragment_submissions;
                         break;
                     case R.id.nav_about_us:
-                        navItemIndex = 4;
+                        navItemIndex = 6;
                         current_fragment_tag = fragment_about_us;
                         break;
+                    case R.id.nav_supporters:
+                        navItemIndex = 7;
+                        current_fragment_tag = fragment_supporters;
+                        break;
                     case R.id.nav_contact_us:
-                        navItemIndex = 5;
+                        navItemIndex = 8;
                         current_fragment_tag = fragment_contact_us;
                         break;
                     case R.id.nav_join_us:
-                        navItemIndex = 6;
+                        navItemIndex = 9;
                         current_fragment_tag = fragment_join_us;
                         break;
                     case R.id.nav_a_team:
-                        navItemIndex = 7;
+                        navItemIndex = 10;
                         current_fragment_tag = fragment_ateam;
                         break;
 
@@ -210,32 +226,47 @@ public class MainActivity extends AppCompatActivity
                 toolbar.setTitle("Home");
                 return homeFragment;
             case 1:
+                BlogFragment blogFragment = new BlogFragment();
+                toolbar.setTitle("Blog");
+                return blogFragment;
+
+            case 2:
+                EventsFragment eventsFragment = new EventsFragment();
+                toolbar.setTitle("Events");
+                return eventsFragment;
+
+            case 3:
                 //medicine log
                 ProjectsFrament projectsFragment = new ProjectsFrament();
                 toolbar.setTitle("Projects");
                 return projectsFragment;
-            case 2:
+            case 4:
                 //my courses
                 GalleryFragment galleryFragment = new GalleryFragment();
                 toolbar.setTitle("Gallery");
                 return galleryFragment;
-            case 3:
+            case 5:
                 SubmissionsFragment submissionsFragment = new SubmissionsFragment();
                 toolbar.setTitle("Submissions");
                 return submissionsFragment;
-            case 4:
+            case 6:
                 AboutUsFragment aboutUsFragment = new AboutUsFragment();
                 toolbar.setTitle("About Us");
                 return aboutUsFragment;
-            case 5:
+            case 7:
+                SupportersFragment supportersFragment = new SupportersFragment();
+                toolbar.setTitle("Our Supporters");
+                return supportersFragment;
+
+            case 8:
                 ContactUsFragment contactUsFragment = new ContactUsFragment();
                 toolbar.setTitle("Contact Us");
                 return contactUsFragment;
-            case 6:
+            case 9:
                 JoinUsFragment joinUsFragment = new JoinUsFragment();
-                toolbar.setTitle("Submissions");
+                toolbar.setTitle("Join Us");
                 return joinUsFragment;
-            case 7:
+            case 10:
                 ATeamFragment aTeamFragment = new ATeamFragment();
                 toolbar.setTitle("A-Team");
                 return aTeamFragment;

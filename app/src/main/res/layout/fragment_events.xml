@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JoinUsFragment">
+    tools:context=".EventsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <WebView
-        android:id="@+id/webView_JoinUs"
+        android:id="@+id/webView_Events"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 /**
@@ -28,6 +30,8 @@ public class JoinUsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+
 
     public JoinUsFragment() {
         // Required empty public constructor
@@ -64,7 +68,24 @@ public class JoinUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_join_us, container, false);
+       View view = inflater.inflate(R.layout.fragment_join_us, container, false);
+       final WebView webView = (WebView) view.findViewById(R.id.webView_JoinUs);
+
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        webView.setWebViewClient(new WebViewClient(){
+
+        public void onPageFinished(WebView view, String url)
+        {
+            view.loadUrl("javascript:(function() { " +
+                    "var head = document.getElementsByClassName('cd-header')[0].style.display='none'; " +
+                    "var head = document.getElementsByClassName('footer')[0].style.display='none'; " +
+                    "})()");
+        }
+    });
+
+        webView.loadUrl("https://gramiksha.in/join-us");
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
