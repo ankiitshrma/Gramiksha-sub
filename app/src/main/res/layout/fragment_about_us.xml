@@ -2,24 +2,159 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.asksira.webviewsuite.WebViewSuite
-        android:id="@+id/webViewSuite"
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_reduc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="GRAMIKSHA"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:enableHorizontalScrollBar="false"
-        app:enableJavaScript="false"
-        app:enableVerticalScrollBar="false"
-        app:inflationDelay="100"
-        app:overrideEmailLink="true"
-        app:overridePdfLink="true"
-        app:overrideTelLink="true"
-        app:showZoomControl="false"
-        app:url="https://gramiksha.in/"
-        app:webViewProgressBarStyle="circular"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/curve_head"
+                android:padding="8dp"
+                android:text="ABOUT GRAMIKSHA"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/img1_rev"
+                android:background="@drawable/curve_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/about_gramiksha"
+                android:textColor="#4b4949"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/about_gramiksha_two"
+                android:layout_marginTop="15dp"
+                android:textColor="#4b4949"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/curve_head"
+                android:padding="8dp"
+                android:text="VISION"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/img4"
+                android:background="@drawable/curve_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/vision"
+                android:textColor="#4b4949"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/curve_head"
+                android:padding="8dp"
+                android:text="MISSION"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/img3"
+                android:background="@drawable/curve_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/mission"
+                android:textColor="#4b4949"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/curve_head"
+                android:padding="8dp"
+                android:text="WHY WE DO IT"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/img2"
+                android:background="@drawable/curve_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/why_we_do"
+                android:textColor="#4b4949"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/why_we_do_two"
+                android:layout_marginTop="15dp"
+                android:textColor="#4b4949"
+                android:textSize="18sp" />
 
 
 
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
