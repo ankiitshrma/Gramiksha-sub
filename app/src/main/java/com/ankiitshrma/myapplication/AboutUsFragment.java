@@ -31,7 +31,7 @@ public class AboutUsFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     
     View view;
-    WebViewSuite webViewSuite;
+    //WebViewSuite webViewSuite;
     
     public AboutUsFragment() {
         // Required empty public constructor
@@ -69,6 +69,8 @@ public class AboutUsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_about_us, container, false);
+        
+        /*
         webViewSuite = (WebViewSuite) view.findViewById(R.id.webViewSuite);
 
         webViewSuite.customizeClient(new WebViewSuite.WebViewSuiteCallback() {
@@ -87,6 +89,7 @@ public class AboutUsFragment extends Fragment {
                 return false;
             }
         });
+        */
 
         return view;
     }
