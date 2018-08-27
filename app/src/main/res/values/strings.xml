@@ -9,4 +9,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_gramiksha">Gramiksha is a non-profit organisation registered under M.P. Society Act, 1973. We believe that all children are deserving of an empowering childhood and equal opportunities. We work to enhance the quality of education in the government schools by assisting them with learning models that encourage critical thinking, equip students with practical knowledge and help in their overall development. We hope to strengthen the public education system and cultivate a culture conducive to learning and growth.</string>
+    <string name="about_gramiksha_two">Gramiksha mobilises the youth and is comprised of like-minded young professionals and students who believe in actualizing this dream. What began as a small initiative for change in 2011 in a village near Gwalior has transformed today into a growing and thriving community across six cities; Bhopal, Delhi, Indore, Gwalior, Jaipur and Laxmangarh.</string>
+    <string name="vision">We aim to improve the quality of education in India by mobilising youth to become educational leaders.</string>
+    <string name="mission">To make schools a higher performing learning system by leveraging the existing resources.</string>
+    <string name="why_we_do">Gramiksha started off as a group of students trying to help a few school children. While they could see the impact the initiative of a small group had effected, they realised the potential that the youth of the country, as a whole, possessed.</string>
+    <string name="why_we_do_two">If every person\'s contribution, regardless of how small, can be brought together on a common platform with a shared vision, that is when the change we wish to see will actualize.</string>
+    
+    
 </resources>
