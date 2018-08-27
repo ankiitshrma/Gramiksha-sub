@@ -1,12 +1,18 @@
 package com.ankiitshrma.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 
 /**
@@ -105,4 +111,41 @@ public class ProjectsFrament extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-}
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ImageButton mDown= view.findViewById(R.id.downArrow);
+        final ScrollView scrollView=view.findViewById(R.id.scrollView);
+        mDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+            }
+        });
+        ImageButton mUp=view.findViewById(R.id.upArrow);
+        mUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scrollView.fullScroll(View.FOCUS_UP);
+            }
+        });
+        TextView mUdaan=view.findViewById(R.id.udaanText);
+        TextView mSeed=view.findViewById(R.id.seedText);
+        mUdaan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getContext(),Udaan.class);
+                startActivity(intent);
+            }
+        });
+        mSeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent seed=new Intent(getContext(),Seed.class);
+                startActivity(seed);
+            }
+        });
+    }
+    }
+
