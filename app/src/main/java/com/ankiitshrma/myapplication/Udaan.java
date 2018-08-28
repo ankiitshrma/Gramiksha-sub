@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import com.asksira.webviewsuite.WebViewSuite;
 
 public class Udaan extends AppCompatActivity {
 
@@ -11,6 +12,27 @@ public class Udaan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_udaan);
+               WebViewSuite webViewSuite;
+        webViewSuite = (WebViewSuite) findViewById(R.id.webViewSuite);
+
+        webViewSuite.customizeClient(new WebViewSuite.WebViewSuiteCallback() {
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return false;
+            }
+        });
+
+        /*
         WebView udaan = findViewById(R.id.webview);
         udaan.getSettings().setJavaScriptEnabled(true);
         udaan.setWebViewClient(new WebViewClient(){
@@ -24,5 +46,6 @@ public class Udaan extends AppCompatActivity {
             }
         });
         udaan.loadUrl("http://www.gramiksha.in/project/udaan");
+        */
     }
 }
