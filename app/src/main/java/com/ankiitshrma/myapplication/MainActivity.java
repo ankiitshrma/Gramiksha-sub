@@ -11,6 +11,7 @@ import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
+                
+    ConnectionDetector cd;
+    AlertDialog.Builder ad;
 
     //for accessing toolbar from fragments
     private Toolbar toolbar;
@@ -80,6 +84,26 @@ public class MainActivity extends AppCompatActivity
             }
         });
         */
+            
+        cd = new ConnectionDetector(this);
+        ad = new AlertDialog.Builder(MainActivity.this);
+        ad.setTitle("Alert");
+        ad.setMessage("Check your Internet connection!!");
+        if (cd.isConnected() == false) {
+            //Toast.makeText(this, "Check your Internet connection!!", Toast.LENGTH_LONG).show();
+            ad.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                    System.exit(0);
+                }
+            });
+            ad.show();
+
+
+
+        } else {
+        }
     }
 
 
