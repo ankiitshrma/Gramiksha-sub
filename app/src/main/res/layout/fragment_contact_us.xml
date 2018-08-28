@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#aeb9c0"
+
     tools:context=".ContactUsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="WE'D LOVE TO HEAR FROM YOU"
         android:layout_marginTop="20dp"
-        android:textColor="#f26522"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="26sp"
         android:gravity="center"
         android:textStyle="bold"/>
