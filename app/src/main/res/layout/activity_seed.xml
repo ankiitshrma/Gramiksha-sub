@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ankiitshrma.myapplication.Seed">
+
+    <com.asksira.webviewsuite.WebViewSuite
+        android:id="@+id/webViewSuite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:enableHorizontalScrollBar="false"
+        app:enableJavaScript="true"
+        app:enableVerticalScrollBar="false"
+        app:inflationDelay="100"
+        app:overrideEmailLink="true"
+        app:overridePdfLink="true"
+        app:overrideTelLink="true"
+        app:showZoomControl="false"
+        app:url="https://gramiksha.in/project/seed"
+        app:webViewProgressBarStyle="circular"/>
+
+</android.support.constraint.ConstraintLayout>
