@@ -78,6 +78,7 @@ public class ContactUsFragment extends Fragment {
         main_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"connect@gramiksha.in"});
@@ -90,6 +91,7 @@ public class ContactUsFragment extends Fragment {
         email_bhopal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"bhopal@gramiksha.in"});
@@ -102,6 +104,7 @@ public class ContactUsFragment extends Fragment {
         email_indore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"indore@gramiksha.in"});
@@ -114,6 +117,7 @@ public class ContactUsFragment extends Fragment {
         email_delhi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"delhi@gramiksha.in"});
@@ -126,6 +130,7 @@ public class ContactUsFragment extends Fragment {
         email_gwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"gwalior@gramiksha.in"});
@@ -138,6 +143,7 @@ public class ContactUsFragment extends Fragment {
         email_lxm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"lxm@gramiksha.in"});
@@ -150,6 +156,7 @@ public class ContactUsFragment extends Fragment {
         email_jaipur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(getActivity(), "Select the GMAIL app!!", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/test");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"jaipur@gramiksha.in"});
